@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 
-public class DestroyableBlock : MonoBehaviour {
+public class DestroyableBlock : _Brick {
 	private void OnCollisionEnter2D(Collision2D collision) {
-		Destroy(gameObject);
+		if (canBeBroken(collision.gameObject)) {
+			Destroy(gameObject);
+		}
 	}
 }
