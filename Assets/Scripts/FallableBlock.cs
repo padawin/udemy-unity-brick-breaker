@@ -10,8 +10,7 @@ public class FallableBlock : _Brick {
 		if (myRigibody.bodyType == RigidbodyType2D.Dynamic) {
 			return;
 		}
-		playDestroySound();
 		GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-		Destroy(gameObject, timeBeforeDestruct);
+		remove(timeBeforeDestruct);
 	}
 }
