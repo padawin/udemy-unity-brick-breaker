@@ -5,6 +5,7 @@ public class Ball : MonoBehaviour {
 	[SerializeField] float speed = 5f;
 
 	Vector2 distanceFromPaddle;
+	float velocityAdjustmentThreshold = 0.001f;
 	bool isLaunched = false;
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,9 @@ public class Ball : MonoBehaviour {
 		}
 		else {
 			Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
+			if (Mathf.Abs(velocity.y) < velocityAdjustmentThreshold) {
+				velocity.y = Random.Range(-1, 1);
+			}
 			velocity.Normalize();
 			GetComponent<Rigidbody2D>().velocity = velocity * speed;
 		}
