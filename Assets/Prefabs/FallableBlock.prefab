@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a883e42fbba74654ea31cac5a0646f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedToBreak: 2
+  sqrMagnitudeThreshold: 9
   timeBeforeDestruct: 2
 --- !u!212 &212844519131378398
 SpriteRenderer:
