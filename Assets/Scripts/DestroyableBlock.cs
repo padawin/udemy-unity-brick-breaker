@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Block : MonoBehaviour {
+public class DestroyableBlock : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D collision) {
 		Destroy(gameObject);
 	}
