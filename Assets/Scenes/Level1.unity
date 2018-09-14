@@ -1111,6 +1111,11 @@ Prefab:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 1013897635}
+    - target: {fileID: 82756492528663798, guid: de541e0bf8cb5be4b821d4158ceeee3e,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de541e0bf8cb5be4b821d4158ceeee3e, type: 2}
   m_IsPrefabAsset: 0

@@ -47,4 +47,10 @@ public class Ball : MonoBehaviour {
 			GetComponent<Rigidbody2D>().velocity = velocity * speed;
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		if (isLaunched) {
+			GetComponent<AudioSource>().Play();
+		}
+	}
 }
