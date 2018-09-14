@@ -3,13 +3,19 @@
 public class Ball : MonoBehaviour {
 	[SerializeField] Paddle paddle;
 	[SerializeField] float speed = 5f;
+	[SerializeField] AudioClip[] sounds;
 
 	Vector2 distanceFromPaddle;
 	float velocityAdjustmentThreshold = 0.001f;
 	bool isLaunched = false;
+
+	// Cached audio source
+	AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
 		distanceFromPaddle = transform.position - paddle.transform.position;
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void lockOnPaddle() {
@@ -50,7 +56,10 @@ public class Ball : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (isLaunched) {
-			GetComponent<AudioSource>().Play();
+			if (audioSource) {
+				AudioClip clip = sounds[Random.Range(0, sounds.Length)];
+				audioSource.PlayOneShot(clip);
+			}
 		}
 	}
 }

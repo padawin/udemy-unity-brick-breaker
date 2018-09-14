@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50050785304316662}
   - component: {fileID: 58906399862166190}
   - component: {fileID: 114575004471571554}
-  - component: {fileID: 82756492528663798}
+  - component: {fileID: 82690506086930866}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -79,7 +79,7 @@ CircleCollider2D:
   m_Offset: {x: 0.00584054, y: 0.013141036}
   serializedVersion: 2
   m_Radius: 0.21219659
---- !u!82 &82756492528663798
+--- !u!82 &82690506086930866
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,8 +88,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2dde18063dfb8b444b0634e4c4e98a24, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -187,6 +187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
   speed: 10
+  sounds:
+  - {fileID: 8300000, guid: 2dde18063dfb8b444b0634e4c4e98a24, type: 3}
+  - {fileID: 8300000, guid: beae6ec4ebb02294d93e483e45b62a3b, type: 3}
+  - {fileID: 8300000, guid: db0cfb6d095628a4faf7ccd14f5634c6, type: 3}
 --- !u!212 &212238033082954878
 SpriteRenderer:
   m_ObjectHideFlags: 1
