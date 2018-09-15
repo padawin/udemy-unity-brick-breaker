@@ -11,10 +11,6 @@ public class Level : MonoBehaviour {
 
 	public void removeBrick() {
 		countBricks--;
-	}
-
-	// Update is called once per frame
-	void Update () {
 		if (countBricks == 0) {
 			FindObjectOfType<SceneLoader>().loadNextScene();
 		}
