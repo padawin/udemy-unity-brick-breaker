@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroySound: {fileID: 0}
-  level: {fileID: 114929779202702280, guid: 43ffa9ea7a3c4084582921e8ca8e8cff, type: 2}
+  points: 5
   timeBeforeDestruct: 2
 --- !u!212 &212844519131378398
 SpriteRenderer:
