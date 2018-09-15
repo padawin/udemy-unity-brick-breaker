@@ -3542,6 +3542,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4996766338587940, guid: 0b283fc54e8c8bf4a91e7a5260713d30,
     type: 2}
   m_PrefabInternal: {fileID: 58149535}
+--- !u!1001 &994772720
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582538255840854, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!114 &1013897635 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114316404898242584, guid: caaa3df54e273444aa14d46faf367be6,
