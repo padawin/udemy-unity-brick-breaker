@@ -3,6 +3,9 @@
 public class _Brick : MonoBehaviour {
 	[SerializeField] AudioClip hitSound;
 	[SerializeField] protected float timeBeforeDestruct = 0f;
+	[SerializeField] int hitsToBreak = 1;
+
+	int hits = 0;
 
 	// cached reference of level
 	Level level;
@@ -20,10 +23,17 @@ public class _Brick : MonoBehaviour {
 
 	protected void OnCollisionEnter2D(Collision2D collision) {
 		if (tag != "unbreakable") {
+			handleHit(collision);
+		}
+		playHitSound();
+	}
+
+	private void handleHit(Collision2D collision) {
+		hits++;
+		if (hits >= hitsToBreak) {
 			addPoints(collision.gameObject.GetComponent<Ball>() != null);
 			remove(timeBeforeDestruct);
 		}
-		playHitSound();
 	}
 
 	void addPoints(bool hitByBall) {
