@@ -13,12 +13,16 @@ public class _Brick : MonoBehaviour {
 	protected void Start() {
 		level = FindObjectOfType<Level>();
 		gameStatus = FindObjectOfType<GameStatus>();
-		level.addBrick();
+		if (tag != "unbreakable") {
+			level.addBrick();
+		}
 	}
 
 	protected void OnCollisionEnter2D(Collision2D collision) {
-		addPoints(collision.gameObject.GetComponent<Ball>() != null);
-		remove(timeBeforeDestruct);
+		if (tag != "unbreakable") {
+			addPoints(collision.gameObject.GetComponent<Ball>() != null);
+			remove(timeBeforeDestruct);
+		}
 		playHitSound();
 	}
 
