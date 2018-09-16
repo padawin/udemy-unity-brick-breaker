@@ -1,14 +1,21 @@
 ﻿using UnityEngine;
+using TMPro;
 
 public class GameStatus : MonoBehaviour {
 	// Config
 	[SerializeField] [Range(0f, 3f)] float gameSpeed = 1f;
 
 	// State
-	[SerializeField] int currentScore = 0;
+	int currentScore = 0;
+	[SerializeField] TextMeshProUGUI scoreText;
 
 	public void addPoints(int points) {
 		currentScore += points;
+		scoreText.text = currentScore.ToString();
+	}
+
+	void Start() {
+		scoreText.text = currentScore.ToString();
 	}
 
 	// Update is called once per frame
