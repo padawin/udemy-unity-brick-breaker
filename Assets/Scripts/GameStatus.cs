@@ -4,6 +4,7 @@ using TMPro;
 public class GameStatus : MonoBehaviour {
 	// Config
 	[SerializeField] [Range(0f, 3f)] float gameSpeed = 1f;
+	[SerializeField] bool resetOnStart = false;
 
 	// State
 	static int currentScore = 0;
@@ -15,6 +16,9 @@ public class GameStatus : MonoBehaviour {
 	}
 
 	void Start() {
+		if (resetOnStart) {
+			currentScore = 0;
+		}
 		scoreText.text = currentScore.ToString();
 	}
 

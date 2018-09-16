@@ -1168,6 +1168,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 525494690}
+    - target: {fileID: 114060136019878464, guid: 824ac064a5c6da747aa4ebb57d1a8e5c,
+        type: 2}
+      propertyPath: resetOnStart
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824ac064a5c6da747aa4ebb57d1a8e5c, type: 2}
   m_IsPrefabAsset: 0
