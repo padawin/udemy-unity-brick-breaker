@@ -6,7 +6,7 @@ public class GameStatus : MonoBehaviour {
 	[SerializeField] [Range(0f, 3f)] float gameSpeed = 1f;
 
 	// State
-	int currentScore = 0;
+	[SerializeField] static int currentScore = 0;
 	[SerializeField] TextMeshProUGUI scoreText;
 
 	public void addPoints(int points) {
