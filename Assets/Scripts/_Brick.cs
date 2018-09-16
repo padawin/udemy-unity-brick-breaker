@@ -5,13 +5,13 @@ public class _Brick : MonoBehaviour {
 	[SerializeField] protected float timeBeforeDestruct = 0f;
 	[SerializeField] int hitsToBreak = 1;
 
-	int hits = 0;
-
 	// cached reference of level
 	Level level;
 	GameStatus gameStatus;
 
 	[SerializeField] int points = 0;
+	[SerializeField] Sprite[] hitSprites;
+	int hits = 0;
 
 	protected void Start() {
 		level = FindObjectOfType<Level>();
@@ -30,9 +30,16 @@ public class _Brick : MonoBehaviour {
 
 	private void handleHit(Collision2D collision) {
 		hits++;
+		setNextHitSprite();
 		if (hits >= hitsToBreak) {
 			addPoints(collision.gameObject.GetComponent<Ball>() != null);
 			remove(timeBeforeDestruct);
+		}
+	}
+
+	private void setNextHitSprite() {
+		if (hits <= hitSprites.Length) {
+			GetComponent<SpriteRenderer>().sprite = hitSprites[hits - 1];
 		}
 	}
 
