@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class _Brick : MonoBehaviour {
-	[SerializeField] AudioClip destroySound;
+	[SerializeField] AudioClip hitSound;
 	// cached reference of level
 	Level level;
 	GameStatus gameStatus;
@@ -16,6 +16,7 @@ public class _Brick : MonoBehaviour {
 
 	protected void OnCollisionEnter2D(Collision2D collision) {
 		addPoints(collision.gameObject.GetComponent<Ball>() != null);
+		playHitSound();
 	}
 
 	void addPoints(bool hitByBall) {
@@ -26,14 +27,13 @@ public class _Brick : MonoBehaviour {
 	}
 
 	protected void remove(float timeBeforeRemoval) {
-		playDestroySound();
 		Destroy(gameObject, timeBeforeRemoval);
 		level.removeBrick();
 	}
 
-	private void playDestroySound() {
-		if (destroySound) {
-			AudioSource.PlayClipAtPoint(destroySound, transform.position);
+	private void playHitSound() {
+		if (hitSound) {
+			AudioSource.PlayClipAtPoint(hitSound, transform.position);
 		}
 	}
 }
