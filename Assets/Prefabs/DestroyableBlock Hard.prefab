@@ -80,7 +80,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: a201a789775336f4093c28b51d056fd0, type: 3}
   timeBeforeDestruct: 0
-  hitsToBreak: 3
   points: 10
   hitSprites:
   - {fileID: 21300000, guid: 3e923b1807d307247993a99fe70b1f2d, type: 3}

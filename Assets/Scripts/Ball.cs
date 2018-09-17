@@ -9,13 +9,15 @@ public class Ball : MonoBehaviour {
 	float velocityAdjustmentThreshold = 0.001f;
 	bool isLaunched = false;
 
-	// Cached audio source
+	// Cached components
 	AudioSource audioSource;
+	Rigidbody2D myRigidBody2D;
 
 	// Use this for initialization
 	void Start () {
 		distanceFromPaddle = transform.position - paddle.transform.position;
 		audioSource = GetComponent<AudioSource>();
+		myRigidBody2D = GetComponent<Rigidbody2D>();
 	}
 
 	void lockOnPaddle() {
@@ -28,7 +30,7 @@ public class Ball : MonoBehaviour {
 
 	void launch() {
 		float initialAngle = Random.Range(Mathf.PI / 6, 5 * Mathf.PI / 6);
-		GetComponent<Rigidbody2D>().velocity = new Vector2(
+		myRigidBody2D.velocity = new Vector2(
 			speed * Mathf.Cos(initialAngle),
 			speed * Mathf.Sin(initialAngle)
 		);
@@ -45,12 +47,12 @@ public class Ball : MonoBehaviour {
 			}
 		}
 		else {
-			Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
+			Vector2 velocity = myRigidBody2D.velocity;
 			if (Mathf.Abs(velocity.y) < velocityAdjustmentThreshold) {
 				velocity.y = Random.Range(-1, 1);
 			}
 			velocity.Normalize();
-			GetComponent<Rigidbody2D>().velocity = velocity * speed;
+			myRigidBody2D.velocity = velocity * speed;
 		}
 	}
 
