@@ -84,7 +84,7 @@ MonoBehaviour:
   hitSprites:
   - {fileID: 21300000, guid: 3e923b1807d307247993a99fe70b1f2d, type: 3}
   - {fileID: 21300000, guid: 64f69ce5d48cf23498c32927d2b8c40a, type: 3}
-  destroySparkles: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 2}
+  destroySparkles: {fileID: 0}
 --- !u!212 &212844519131378398
 SpriteRenderer:
   m_ObjectHideFlags: 1

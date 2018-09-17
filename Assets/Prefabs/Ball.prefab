@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d4b9790510fac468b29a295256ca15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle: {fileID: 0}
+  paddle: {fileID: 114316404898242584, guid: caaa3df54e273444aa14d46faf367be6, type: 2}
   speed: 10
   sounds:
   - {fileID: 8300000, guid: 2dde18063dfb8b444b0634e4c4e98a24, type: 3}
