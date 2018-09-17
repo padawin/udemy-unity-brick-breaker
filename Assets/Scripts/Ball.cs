@@ -48,6 +48,9 @@ public class Ball : MonoBehaviour {
 		}
 		else {
 			Vector2 velocity = myRigidBody2D.velocity;
+			if (Mathf.Abs(velocity.x) < velocityAdjustmentThreshold) {
+				velocity.x = Random.Range(-1, 1);
+			}
 			if (Mathf.Abs(velocity.y) < velocityAdjustmentThreshold) {
 				velocity.y = Random.Range(-1, 1);
 			}
