@@ -3,7 +3,6 @@
 public class _Brick : MonoBehaviour {
 	[SerializeField] AudioClip hitSound;
 	[SerializeField] protected float timeBeforeDestruct = 0f;
-	[SerializeField] int hitsToBreak = 1;
 
 	// cached reference of level
 	Level level;
@@ -31,15 +30,22 @@ public class _Brick : MonoBehaviour {
 	private void handleHit(Collision2D collision) {
 		hits++;
 		setNextHitSprite();
-		if (hits >= hitsToBreak) {
+		if (hits > hitSprites.Length) {
 			addPoints(collision.gameObject.GetComponent<Ball>() != null);
 			remove(timeBeforeDestruct);
 		}
 	}
 
 	private void setNextHitSprite() {
-		if (hits <= hitSprites.Length) {
-			GetComponent<SpriteRenderer>().sprite = hitSprites[hits - 1];
+		int spriteIndex = hits - 1;
+		if (spriteIndex < hitSprites.Length) {
+			if (hitSprites[spriteIndex] == null) {
+				Debug.LogError(
+					"Sprite at index " + spriteIndex +
+					" is missing in object " + gameObject.name
+				);
+			}
+			GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
 		}
 	}
 
