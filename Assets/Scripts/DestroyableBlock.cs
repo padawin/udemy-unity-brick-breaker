@@ -14,6 +14,9 @@ public class DestroyableBlock : _Brick {
 	}
 
 	private void triggerSparkles() {
+		if (destroySparkles == null) {
+			return;
+		}
 		GameObject sparkles = Instantiate(destroySparkles, transform.position, transform.rotation);
 		Destroy(sparkles, 1f);
 	}
