@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level4 - Death Star.unity
     guid: c20e50a3f47f8514e8c8b5c2a942a491
   - enabled: 1
-    path: Assets/Scenes/EndGame.unity
+    path: Assets/Scenes/EndGameWin.unity
+    guid: 3abc7c664ad69be4788d38d9677c9cd8
+  - enabled: 1
+    path: Assets/Scenes/EndGameLose.unity
     guid: c0e577efc811614468454403c36078ec
   m_configObjects: {}
