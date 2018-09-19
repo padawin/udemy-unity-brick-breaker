@@ -11,6 +11,7 @@ public class _Brick : MonoBehaviour {
 	[SerializeField] int points = 0;
 	[SerializeField] Sprite[] hitSprites;
 	int hits = 0;
+	bool isDestroyed = false;
 
 	protected void Start() {
 		level = FindObjectOfType<Level>();
@@ -31,6 +32,10 @@ public class _Brick : MonoBehaviour {
 		hits++;
 		setNextHitSprite();
 		if (hits > hitSprites.Length) {
+			if (isDestroyed) {
+				return;
+			}
+			isDestroyed = true;
 			addPoints(collision.gameObject.GetComponent<Ball>() != null ? 2 : 1);
 			remove(timeBeforeDestruct);
 		}
