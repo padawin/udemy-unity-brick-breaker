@@ -2,20 +2,33 @@
 using UnityEngine;
 
 public class SceneLoader : MonoBehaviour {
-	public void loadNextScene() {
-		int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-		SceneManager.LoadScene(currentSceneIndex + 1);
-	}
+	int lastLoadedSceneIndex = 1;
 
-	public void loadFirstScene() {
-		SceneManager.LoadScene(0);
-	}
-
-	public void loadScene(int index) {
+	private void _loadScene(int index) {
+		lastLoadedSceneIndex = SceneManager.GetActiveScene().buildIndex;
 		SceneManager.LoadScene(index);
 	}
 
+
+	public void loadNextScene() {
+		int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+		_loadScene(currentSceneIndex + 1);
+	}
+
+	public void loadLastLoadedScene() {
+		_loadScene(lastLoadedSceneIndex);
+	}
+
+	public void loadFirstScene() {
+		_loadScene(0);
+	}
+
+	public void loadScene(int index) {
+		_loadScene(index);
+	}
+
 	public void loadSceneFromName(string name) {
+		lastLoadedSceneIndex = SceneManager.GetActiveScene().buildIndex;
 		SceneManager.LoadScene(name);
 	}
 

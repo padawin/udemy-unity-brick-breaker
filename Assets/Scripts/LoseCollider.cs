@@ -7,6 +7,6 @@ public class LoseCollider : MonoBehaviour {
 		if (collision.gameObject.name != "Ball") {
 			return;
 		}
-		sceneLoader.loadSceneFromName("EndGame");
+		sceneLoader.loadSceneFromName("EndGameLose");
 	}
 }
