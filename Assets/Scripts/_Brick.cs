@@ -31,7 +31,7 @@ public class _Brick : MonoBehaviour {
 		hits++;
 		setNextHitSprite();
 		if (hits > hitSprites.Length) {
-			addPoints(collision.gameObject.GetComponent<Ball>() != null);
+			addPoints(collision.gameObject.GetComponent<Ball>() != null ? 2 : 1);
 			remove(timeBeforeDestruct);
 		}
 	}
@@ -49,11 +49,8 @@ public class _Brick : MonoBehaviour {
 		}
 	}
 
-	void addPoints(bool hitByBall) {
-		gameStatus.addPoints(points);
-		if (!hitByBall) {
-			gameStatus.addPoints(points);
-		}
+	void addPoints(int multiplier) {
+		gameStatus.addPoints(points * multiplier);
 	}
 
 	protected void remove(float timeBeforeRemoval) {
