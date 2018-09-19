@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level2.unity
     guid: 8f4aa9974e24d9e4f8eb02a8c1f4c07c
   - enabled: 1
+    path: Assets/Scenes/Level3 - Manhattan in reverse.unity
+    guid: 35c271c874a6bb24485c9bce92c7f8f3
+  - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: c0e577efc811614468454403c36078ec
   m_configObjects: {}
