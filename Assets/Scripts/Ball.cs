@@ -13,6 +13,10 @@ public class Ball : MonoBehaviour {
 	AudioSource audioSource;
 	Rigidbody2D myRigidBody2D;
 
+	public void multiplySpeed(float multiplier) {
+		speed *= multiplier;
+	}
+
 	// Use this for initialization
 	void Start () {
 		distanceFromPaddle = transform.position - paddle.transform.position;
