@@ -12,17 +12,32 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: be0fdda386e599b47a011696169d4f46
   - enabled: 1
+    path: Assets/Scenes/Level1 Intro.unity
+    guid: 20025c3a31445684b9c69effaabd3454
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: ad0494619e75efa4fbb42fd99b35d4c8
+  - enabled: 1
+    path: Assets/Scenes/Level2 Intro.unity
+    guid: 660343a7ba4f3944890acc6efa5e38d1
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 8f4aa9974e24d9e4f8eb02a8c1f4c07c
   - enabled: 1
+    path: Assets/Scenes/Level3 Intro.unity
+    guid: f31cc6fce33376b4a9801141f6aec899
+  - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: dca6b32030cf93941be4f0f88f97bbc1
   - enabled: 1
+    path: Assets/Scenes/Level4 Intro.unity
+    guid: 736fc3f6a4f84db48987c6cccd8740ee
+  - enabled: 1
     path: Assets/Scenes/Level4 - Manhattan in reverse.unity
     guid: 35c271c874a6bb24485c9bce92c7f8f3
+  - enabled: 1
+    path: Assets/Scenes/Level5 Intro.unity
+    guid: cad45541406592c42825e60cb9255a69
   - enabled: 1
     path: Assets/Scenes/Level5 - Death Star.unity
     guid: c20e50a3f47f8514e8c8b5c2a942a491
